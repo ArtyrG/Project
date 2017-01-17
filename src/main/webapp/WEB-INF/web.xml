@@ -1,0 +1,44 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<listener>
+		<listener-class>authdemo.HibernateInitContextListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>AuthServlet</servlet-name>
+		<servlet-class>authdemo.AuthServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RegServlet</servlet-name>
+		<display-name>RegServlet</display-name>
+		<description></description>
+		<servlet-class>authdemo.RegServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Profile</servlet-name>
+		<display-name>Profile</display-name>
+		<description></description>
+		<servlet-class>authdemo.Profile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthServlet</servlet-name>
+		<url-pattern>/auth.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegServlet</servlet-name>
+		<url-pattern>/RegServlet.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Profile</servlet-name>
+		<url-pattern>/Profile</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>
+			authdemo.HibernateInitContextListener
+		</listener-class>
+	</listener>
+</web-app>
